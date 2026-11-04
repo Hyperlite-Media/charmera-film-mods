@@ -1,0 +1,27 @@
+# Firmware images and dumps contain Kodak/GeneralPlus firmware and personal data
+# (photos and settings stored in the camera). Never commit them.
+*.bin
+!HACK.BIN
+JH_5408*
+
+# Photos and card contents
+*.jpg
+*.JPG
+*.avi
+DCIM/
+SPIDCIM/
+
+# Resources extracted from the firmware (Kodak's), and a duplicate of flasher/
+extracted/
+trinket_spi_flash/
+
+# Build output and logs
+HACK.map
+HACKLOG.TXT
+HACKKEYS.TXT
+HACKEDGE.TXT
+__pycache__/
+
+# macOS
+.DS_Store
+._*

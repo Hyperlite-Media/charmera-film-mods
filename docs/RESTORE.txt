@@ -1,0 +1,26 @@
+Charmera film mods: back to factory firmware from the SD card
+=============================================================
+
+For a camera with the film mods installed. Firmware JH5408 version 202505201029 only.
+This rewrites the camera's firmware. Do it at your own risk.
+
+Restore
+-------
+1. Charge the battery fully. A power cut during the update can leave the camera unbootable.
+2. Back up the card, then on the ROOT of the SD card (not inside DCIM):
+     - copy   JH_5408202505201029_0852C329.bin   (name unchanged)
+     - copy   HACK.BIN from this project (it must be this version or newer)
+     - delete any other JH_5408... file
+3. Put the card in the camera and switch it on. An "Upgrade" screen counts to 100 %.
+   Do not touch the camera until it reaches 100 %.
+4. At 100 % the camera waits: hold the power button for about 2 seconds to switch off.
+5. Switch on again. The camera now runs factory firmware, opening on the options screen.
+6. Delete the JH_5408..., HACK.BIN and HACK.INI files from the card.
+
+Notes
+-----
+- The camera's own settings reset to factory defaults. Internal photos are not touched.
+- Keep only ONE JH_5408... file on the card. A modded camera restores whenever this file
+  is present, and a factory camera installs any JH_5408 install file it finds, so with both
+  on the card the camera could keep switching between them.
+- To install the mods again later, follow INSTALL.txt.

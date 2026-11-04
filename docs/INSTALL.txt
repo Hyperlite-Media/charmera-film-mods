@@ -1,0 +1,42 @@
+Charmera film mods: SD card install
+===================================
+
+For the Kodak Charmera with firmware JH5408 version 202505201029 only.
+This changes the camera's firmware. Do it at your own risk.
+
+What it does
+------------
+The camera's own SD updater installs a small loader (and JPEG quality 92). After that,
+the camera runs HACK.BIN from the SD card at every boot, using the settings in HACK.INI.
+
+Install
+-------
+1. Charge the battery fully. A power cut during the update can leave the camera unbootable.
+2. Build the install file (see the README), then copy these three files to the ROOT of the SD card (not inside DCIM), names unchanged:
+     JH_5408202511041200_0852BD83.bin
+     HACK.BIN
+     HACK.INI
+3. Put the card in the camera and switch it on. An "Upgrade" screen counts to 100 %.
+   Do not touch the camera until it reaches 100 %.
+4. At 100 % the camera waits: hold the power button for about 2 seconds to switch off.
+5. Switch on again. After the Kodak logo the camera opens in photo mode and shows the
+   film name. You can delete the JH_5408... file from the card afterwards.
+
+Notes
+-----
+- The update resets the camera's own settings to factory defaults, as an official
+  update does. The mods' settings live in HACK.INI and are not affected.
+- Photos stored in the camera's internal memory are not touched.
+- Use it: in photo mode, press PLAY for the settings menu (up/down change a value,
+  PLAY = next setting, SHUTTER = close and save). The gallery is the menu's last item,
+  or power button > playback.
+- Every film adds a film border to its photos, with the film's name along the edge. Turn it
+  off for a film with BORDER in the menu, or for all films with film_borders = off in HACK.INI.
+  The frame number on the border is the photo's file number (PICT0062 prints 62).
+- To turn the mods off, delete HACK.BIN from the card. The loader stays in the camera but
+  does nothing without HACK.BIN.
+- To go back to factory firmware, use the restore file and RESTORE.txt.
+- Keep only ONE JH_5408... file on the card. With an install file and a restore file both
+  present, the camera could keep switching between them.
+- Once installed, the loader blocks the stock SD updater, so official updates and other
+  JH_5408 files are ignored. The factory restore file is the one exception.
