@@ -22,11 +22,7 @@ are not supported.
 - **Higher JPEG quality:** 92 instead of 85
 - **Boot straight to photo mode**, button click sound off, and interface language locked
 
-## This repository contains no firmware
-A stock camera ignores `HACK.BIN` and `HACK.INI` until the loader is installed, so copying them to
-a card does nothing on its own.
-
-Kodak's firmware is not included, so you need an image from your own camera. Without an install
+You need an image from your own camera. Without an install
 file, this means opening the camera and reading its flash chip once:
 
 1. Read the 2 MB flash with an SPI programmer. `flasher/` has a sketch and script for an Adafruit
